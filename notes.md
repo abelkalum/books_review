@@ -52,6 +52,6 @@ Helper methods
 Schedule
 xset up classes
 Xset up database
--set up controllers
--set up models
--set up views
+xset up controllers
+xset up models
+xset up views
