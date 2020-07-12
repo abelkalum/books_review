@@ -50,7 +50,7 @@ Helper methods
 -be at app/controller
 
 Schedule
--set up classes
+xset up classes
 -set up database
 -set up controllers
 -set up models
