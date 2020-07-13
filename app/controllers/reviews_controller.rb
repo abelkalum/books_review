@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   end 
     
   post '/reviews' do 
-    @review = Review.create(title: params[:title], author: params[:author], review: params[:review])
+    @review = Review.create(title: params[:title], author: params[:author], text: params[:text])
     redirect "/reviews/#{@review.id}"
   end
 

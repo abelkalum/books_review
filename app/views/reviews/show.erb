@@ -1,6 +1,6 @@
-</i> Your review for <i><%= @review.book.title %></i> by <%= @review.book.author %>: <br> <br> 
+Your review for <%= @review.book.title %> by <%= @review.book.author %>: <br> <br> 
 "<%= @review.text %>" <br>
- 
+
 <% @user = current_user %> 
 <% if @user.id == @review.user_id %> 
   <a class="button" href="/reviews/<%=@review.id%>/edit">Edit</a> <br> <br> 
@@ -12,4 +12,4 @@
  
 <br> <br>
 <!-- back to user's home page --> 
-<a class="button" href="/users/user_home">Back to Home</a>
+<a class="button" href="/users/show">Back to Home</a>
