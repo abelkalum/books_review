@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
  
   post '/users/signup' do
-    if params[:email] == “” && params[:password] == “”
+    if params[:email] == "" && params[:password] == ""
       redirect "/users/signup"
     else
       @user = User.create(email: params[:email], password: params[:password])
