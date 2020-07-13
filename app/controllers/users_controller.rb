@@ -4,9 +4,9 @@ class UsersController < ApplicationController
     erb :'/users/signup'
   end
  
-  post '/users/signup'
+  post '/users/signup' do
     if params[:email] == “” && params[:password] == “”
-      redirect “/users/signup”
+      redirect "/users/signup"
     else
       @user = User.create(email: params[:email], password: params[:password])
       sessions[:user_id] = @user.id
@@ -42,5 +42,6 @@ class UsersController < ApplicationController
     if logged_in? 
       session.clear 
       redirect '/'
+    end
   end
 end
