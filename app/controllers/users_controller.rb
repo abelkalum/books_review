@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       redirect "/users/signup"
     else
       @user = User.create(email: params[:email], password: params[:password])
-      sessions[:user_id] = @user.id
+      session[:user_id] = @user.id
       redirect "/users/#{@user.id}"
     end
   end
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     erb :'/users/show'
   end
     
-  get '/logout' do 
+  get '/users/logout' do 
     if logged_in? 
       session.clear 
       redirect '/'
